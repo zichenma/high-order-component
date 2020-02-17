@@ -7,6 +7,9 @@ class B extends Component {
     return (
       <Fragment>
         <h1>This is Component B</h1>
+        <div>My name is {this.props.name}.</div>
+        <div> My age is {this.props.age}.</div>
+        <div> My gender is {this.props.sex}.</div>
       </Fragment>
     );
   }

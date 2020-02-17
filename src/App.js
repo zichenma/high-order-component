@@ -7,9 +7,9 @@ import C from './components/C';
 function App() {
   return (
     <Fragment>
-        <A />
-        <B />
-        <C />
+      <A />
+      <B name={'Joh Doe'} age={34} />
+      <C />
     </Fragment>
   );
 }
