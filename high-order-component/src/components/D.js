@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
-function A(WrapperComponent) {
-    return class A extends Component {
+function d(WrapperComponent) {
+    return class D extends Component {
         render() {
             return (
                 <Fragment>
-                    <h1>/* This is HOC A */</h1>
+                    <h1>This is HOC D</h1>
                     <WrapperComponent></WrapperComponent>
                 </Fragment>
             )
@@ -13,4 +13,4 @@ function A(WrapperComponent) {
     }
 }
 
-export default A;
+export default D;
