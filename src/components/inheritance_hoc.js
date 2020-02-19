@@ -4,6 +4,8 @@ import React from 'react';
 // 使用代理方式功能更加清晰
 const modifyPropsHOC = WrappedComponent =>
   class NewComponent extends WrappedComponent {
+    static displayName = `NewComponent(${getDisplayName(WrappedComponent)})`;
+
     componentWillMount() {
       // 修了 component 里的 componentWillMount!
       console.log('I am componentWillMont from HOC');
@@ -17,5 +19,10 @@ const modifyPropsHOC = WrappedComponent =>
       return React.cloneElement(element, newProps, element.props.children);
     }
   };
+
+function getDisplayName(WrappedComponent) {
+  console.log(WrappedComponent.name);
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
 
 export default modifyPropsHOC;
