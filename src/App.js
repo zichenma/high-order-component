@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import './App.css';
+import './static/iconfont.css';
 // import A from './components/A';
 // import B from './components/B';
 // import C from './components/C';
@@ -16,6 +17,7 @@ function App() {
       <Inheritance_1 />
       <Inheritance_2 /> */}
       <Tabbar />
+      {/* <div className='iconfont icon-home'></div> */}
     </Fragment>
   );
 }
