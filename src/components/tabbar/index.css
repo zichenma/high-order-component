@@ -17,6 +17,11 @@
   justify-content: space-evenly;
   
 }
+
 .tabbar-item{
   flex-shrink: 1;
+}
+
+.active {
+  color: red;
 }
