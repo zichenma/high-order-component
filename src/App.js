@@ -6,6 +6,7 @@ import './static/iconfont.css';
 // import C from './components/C';
 // import Inheritance_1 from './components/inheritance_1';
 // import Inheritance_2 from './components/inheritance_2';
+import RouterMap from './router';
 import Tabbar from './components/tabbar';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <C />
       <Inheritance_1 />
       <Inheritance_2 /> */}
-      <Tabbar />
+      <RouterMap />
+      {/* <Tabbar /> */}
       {/* <div className='iconfont icon-home'></div> */}
     </Fragment>
   );
