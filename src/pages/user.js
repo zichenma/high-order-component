@@ -6,10 +6,9 @@ class User extends PureComponent {
         return (
             <div>
                 <img className='bg' src="https://dummyimage.com/400x640/cccccc/000000.png&text=User" alt="dummyImage" />
-                <Tabbar />
             </div>
         )
     }
 }
 
-export default User
+export default  Tabbar(User)

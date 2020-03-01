@@ -24,7 +24,8 @@ const tabbarArr = [
     link: '/user'
   }
 ];
-class Tabbar extends PureComponent {
+
+const Tabbar = WrappedComponent => class Tabbar extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -40,19 +41,25 @@ class Tabbar extends PureComponent {
   render() {
     const url = window.location.href;
     return (
-      <div className="tabbar">
-        <div className='tabbar-content'>
-          {
-            tabbarArr.map((v, i) => (
-                <Link to={v.link} key={i} className={`tabbar-item ${(url.indexOf(v.link) > -1 ? 'active' : '')}`}>
-                <div className={`iconfont ${v.img}`} />
-                <div>{v.text}</div>
-                </Link>
-              ))
-          }
+      <div className='container'>
+          <div className='tabbar-children'>
+              <WrappedComponent />
+          </div>
+          <div className="tabbar">
+          <div className='tabbar-content'>
+            {
+              tabbarArr.map((v, i) => (
+                  <Link to={v.link} key={i} className={`tabbar-item ${(url.indexOf(v.link) > -1 ? 'active' : '')}`}>
+                  <div className={`iconfont ${v.img}`} />
+                  <div>{v.text}</div>
+                  </Link>
+                ))
+            }
+          </div>
         </div>
       </div>
     )
   }
 }
+
 export default Tabbar;

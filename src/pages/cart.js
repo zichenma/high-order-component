@@ -6,10 +6,9 @@ class Cart extends PureComponent {
         return (
             <div>
                 <img className='bg' src="https://dummyimage.com/400x640/cccccc/000000.png&text=Cart" alt="dummyImage" />
-                <Tabbar />
             </div>
         )
     }
 }
 
-export default Cart
+export default Tabbar(Cart);

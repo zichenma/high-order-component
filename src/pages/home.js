@@ -6,10 +6,9 @@ class Home extends PureComponent {
         return (
             <div>
                 <img className='bg' src="https://dummyimage.com/400x640/cccccc/000000.png&text=Home" alt="dummyImage" />
-                <Tabbar />
             </div>
         )
     }
 }
 
-export default Home;
+export default Tabbar(Home);
