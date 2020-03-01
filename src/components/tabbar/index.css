@@ -5,7 +5,7 @@
 
 .tabbar {
   height: 50px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   border: 1px solid rgba(204, 204, 204, 0.43);
@@ -23,5 +23,5 @@
 }
 
 .active {
-  color: red;
+  color: red !important;
 }

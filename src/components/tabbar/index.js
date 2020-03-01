@@ -38,12 +38,13 @@ class Tabbar extends PureComponent {
     })
   }
   render() {
+    const url = window.location.href;
     return (
       <div className="tabbar">
         <div className='tabbar-content'>
           {
             tabbarArr.map((v, i) => (
-                <Link to={v.link} key={i} className={`tabbar-item ${(this.state.index === i ? 'active' : '')}`}>
+                <Link to={v.link} key={i} className={`tabbar-item ${(url.indexOf(v.link) > -1 ? 'active' : '')}`}>
                 <div className={`iconfont ${v.img}`} />
                 <div>{v.text}</div>
                 </Link>

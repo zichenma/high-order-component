@@ -1,17 +1,13 @@
 import React, { PureComponent } from 'react'
+import Tabbar from '../components/tabbar'
 
 class Category extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            
-        }
-    }
-
     render() {
         return (
-            <div>Category</div>
+            <div>
+                <img className='bg' src="https://dummyimage.com/400x640/cccccc/000000.png&text=Category" alt="dummyImage" />
+                <Tabbar />
+            </div>
         )
     }
 }
