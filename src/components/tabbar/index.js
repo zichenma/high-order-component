@@ -1,22 +1,27 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css'
 
 const tabbarArr = [
   {
     img: 'icon-home',
-    text: 'Home'
+    text: 'Home',
+    link: '/home'
   },
   {
     img: 'icon-fenlei',
-    text: 'Categories'
+    text: 'Categories',
+    link: '/category'
   },
   {
     img: 'icon-gouwuchekong',
-    text: 'Cart'
+    text: 'Cart',
+    link: '/cart'
   },
   {
     img: 'icon-yonghu',
-    text: 'User'
+    text: 'User',
+    link: '/user'
   }
 ];
 class Tabbar extends PureComponent {
@@ -38,10 +43,10 @@ class Tabbar extends PureComponent {
         <div className='tabbar-content'>
           {
             tabbarArr.map((v, i) => (
-                <div key={i} className={`tabbar-item ${(this.state.index === i ? 'active' : '')}`} onClick={() => this.itemChange(i)}>
+                <Link to={v.link} key={i} className={`tabbar-item ${(this.state.index === i ? 'active' : '')}`}>
                 <div className={`iconfont ${v.img}`} />
                 <div>{v.text}</div>
-                </div>
+                </Link>
               ))
           }
         </div>

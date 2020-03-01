@@ -1,19 +1,15 @@
 import React, { PureComponent } from 'react'
+import Tabbar from '../components/tabbar'
 
 class Home extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            
-        }
-    }
-
     render() {
         return (
-            <div>Home</div>
+            <div>
+                <img className='bg' src="https://dummyimage.com/400x640/cccccc/000000.png&text" alt="dummyImage" />
+                <Tabbar />
+            </div>
         )
     }
 }
 
-export default Home
+export default Home;
